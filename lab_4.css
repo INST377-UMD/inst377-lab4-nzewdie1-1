@@ -1,0 +1,25 @@
+body {
+    background-color: aqua;
+}
+
+
+
+
+.item{
+    background-color: cornsilk;
+    color: black;
+    padding-left: 10%; 
+    padding-right: 10%;
+    padding-bottom: .1%;
+    padding-top: 10;
+    border: 2px solid black;
+    margin: 10px;
+   
+    
+}
+
+
+
+.item_Div{
+    display: flex;
+}
