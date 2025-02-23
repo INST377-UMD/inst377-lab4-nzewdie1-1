@@ -1,0 +1,86 @@
+<html>
+    <head >
+        <h1 id ="header">INST377 - Lab 4<h1>
+        <link rel="stylesheet" href="Lab_4.css">
+    </head>
+
+    <body id="body">
+            <div class ="item_Div">
+                <div class="item"  >
+
+                    <form onsubmit="alert_me()" action ="">
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="contact-name" required> 
+                        <input type="submit" value="Alert Me!">
+                    </form>
+
+                    
+
+                    <script type="text/javascript">
+                        function alert_me() {
+                        var name =  document.getElementById('contact-name').value;
+                        alert("Hi " + name + "!")
+                         }
+                    </script>
+
+                </div>
+
+                <div class="item"  >
+                    <button onclick="changeColor1()">Change Color</button>
+
+                    
+
+                    <script type="text/javascript">
+                        function changeColor1() {
+                            if(document.getElementById('body').style.backgroundColor == 'aqua') {
+                                const t = document.getElementById('body').style.backgroundColor = 'salmon';
+                            } else {
+                                const t = document.getElementById('body').style.backgroundColor = 'aqua';
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <div class ="item_Div">
+                <div class = "item">
+                    
+
+                    <form onsubmit="test_text()" action ="">
+                        <label for="Text_tester">Text Tester: </label>
+                        <input type="text" name="name" id="text_input" required> 
+                        <input type="submit" value="Validate Text">
+                    </form>
+
+                    
+
+                    <script type="text/javascript">
+                        function test_text() {
+                            var text_input =  document.getElementById('text_input').value;
+                            
+
+                            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+                            if (text_input.match(validation)){
+                                alert("No Special charcters allowed!");
+                            }
+                        }
+
+                    </script>
+
+                    </div>
+
+                    <div class="item"  >
+
+                        <button onclick="add_text()">Add Text</button>
+
+                        <script type="text/javascript">
+                            function add_text() {
+                                var header = document.getElementById("header");
+                                header.textContent += "- Add Text"
+                            }
+                        </script>
+                    </div>
+            </div>
+    </body>
+</html>
